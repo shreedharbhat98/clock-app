@@ -37,24 +37,26 @@ export default class Timer extends Component {
         return time
     }
     startTimer = () => {
-        let time = this.takeTime()
-        if(time === 0){
-            alert("Enter Valid Time")
-            return
+        if(this.state.value === "START"){
+            let time = this.takeTime()
+            if(time === 0){
+                alert("Enter Valid Time")
+                return;
+            }
+            this.setState({ mSec: (time-1000), sec:"", min:"", hour:"" }, () => {});
+
         }
-        this.setState({ mSec: time, sec:"", min:"", hour:"" }, () => {});
         if (this.state.value === "START" || this.state.value === "RESUME") {
             this.setState({
                 value: "PAUSE"
 
-            })
+            }, clearInterval(this.interval))
             this.interval = setInterval(() => {
                 if (this.state.sec === 0) {
                     this.setState({
                         timerOver: true,
                         value: "START"
                     })
-                    clearInterval(this.interval)
                 }
                 else {
                     const { mSec } = this.state
