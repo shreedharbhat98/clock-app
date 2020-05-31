@@ -1,0 +1,48 @@
+.App {
+  text-align: center;
+  display: flex;
+ margin:1px;
+ font-family: 'PT Serif', serif;
+}
+.TimerBox{
+  text-align: center;
+  height: 352px;
+  width: 700px;
+  margin: auto;
+  margin-top: 3%;
+  border: 2px solid #bdbdbd;
+  border-radius: 8px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.Grid{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  padding: 15px;
+  padding-bottom: 0;
+  /* border-bottom: 2px solid #bdbdbd; */
+}
+
+  #border-top{
+    border-top: 2px solid #bdbdbd;
+  }
+
+
+.Content{
+  height: 200px;
+
+}
+
+span{
+  font-size: 30px;
+}
