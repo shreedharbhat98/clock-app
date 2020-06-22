@@ -43,7 +43,7 @@ export default class Timer extends Component {
                 alert("Enter Valid Time")
                 return;
             }
-            this.setState({ mSec: (time-1000), sec:"", min:"", hour:"" }, () => {});
+            this.setState({ mSec: (time-1000), sec:"", min:"", hour:"", timerOver:false }, () => {});
 
         }
         if (this.state.value === "START" || this.state.value === "RESUME") {
