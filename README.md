@@ -13,4 +13,5 @@ This project is clone of Google clock app which I have created while learning Re
 * `Clone this repository`
 * `npm install`
 
-Run command `npm start`
+Run command 
+* `npm start`
